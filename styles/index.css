@@ -181,15 +181,14 @@ aside {
 
 .welcome h2+p {
     background-color: rgba(250, 118, 78, 0.5);
-    width: 12rem;
     text-align: center;
     border-radius: 20px;
     padding: 0.5rem;
 }
 
 .poem {
-    font-size: 16px;
-    line-height: 1.5em;
+    font-size: 12px;
+    line-height: 2em;
 }
 
 .poem h3 {
