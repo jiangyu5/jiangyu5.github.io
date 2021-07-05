@@ -20,19 +20,23 @@ let quesAll = Number(document.getElementById('ques-all').textContent);
 let quesTrue = Number(document.getElementById('ques-true').textContent);
 
 // 10条历史记录
-const historyList = document.getElementById('history').querySelectorAll('li');
+
 function replaceHistoty(history) {
-    for (var i=historyList.length-1; i>=0; i--) {
-        if (i>0) {
-            historyList[i].textContent = historyList[i-1].textContent;
-        } else {
-            historyList[0].textContent = history;
-        }
+    var historyUl = document.getElementById('history');
+    var ulList = historyUl.querySelectorAll('li');
+    if (ulList.length > 9) {
+        historyUl.removeChild(ulList[0]);
     }
+    var newLi = document.createElement('li');
+    var liNode = document.createTextNode(history);
+    newLi.append(liNode);
+    historyUl.appendChild(newLi);
+
+    console.log(historyUl);
 }
 
 // 开始按钮
-btnList[0].onclick = function() {
+function startButton() {
     if (btnList[0].textContent === '开始') {
         btnList[0].textContent = '重置';
         replaceNum();
@@ -41,10 +45,10 @@ btnList[0].onclick = function() {
         document.getElementById('ques-all').textContent = 0;
         document.getElementById('ques-true').textContent = 0;
         document.getElementById('ques-accuracy').textContent = 0;
-        
-
     }
 }
+
+btnList[0].addEventListener('click', startButton);
 
 // 数字按钮
 btnList[1].onclick = function() { inputList[2].value += btnList[1].value; };
@@ -102,4 +106,3 @@ btnList[15].onclick = function() {
     inputList[2].value = eval(qTxt);
 }
 
-console.log(historyList);

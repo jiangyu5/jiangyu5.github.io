@@ -70,7 +70,6 @@ nav li:not(:last-child):hover {
 footer{
     font-size: 12px;
     text-align: center;
-    /* background-color: rgba(59, 122, 240, .2); */
     border-radius: 5px;
 }
 
@@ -80,7 +79,7 @@ footer p {
 
 /* =========主要总区域 ========================================*/
 main {
-    margin: 1em 1em ;
+    margin: 0 auto;
     display: flex;
     flex-flow: column-reverse;
 }
@@ -88,82 +87,110 @@ main {
 
 /* ===侧边栏======侧边栏======侧边栏======侧边栏=== */
 aside {
-    font-size: smaller;
-    border: 1px solid skyblue;
-    width: 30vw;
+    font-size: medium;
+    width: 80vw;
     margin: 0 auto;
+    display: flex;
 }
 
+aside ul {
+    list-style: none;
+    padding-left: 1em;
+    border-left: 2px dotted darkgrey;
+}
+
+aside>ul li {
+    margin-left: 1em;
+}
+
+aside>ul p {
+    margin-bottom: 0;
+}
+
+aside ul:nth-of-type(1) {
+    width: 40%;
+}
+
+#history {
+    width: 50%;
+}
 
 /* ===右侧总区======右侧总区======右侧总区======右侧总区=== */
 article {
-    border: 1px solid skyblue;
-    width: 350px;
+    /* border: 1px solid skyblue; */
+    width: 90vw;
     margin: 0 auto;
 }
 
 /* 题目设置 */
 .option {
     margin-top: 10px;
+    
 }
 
 .option input {
+    font-size: 3vh;
     text-align: center;
-    width: 2em;
+    width: 5%;
     border-radius: 15px;
 }
 
 .option>span:nth-of-type(1) {
-    font-size: small;
+    font-size: 3vh;
 }
 
 .option button {
-    font-size: medium;
+    font-size: 3vh;
     border-radius: 5px;
+    margin-left: 1em;
 }
 
 /* ===题目显示======题目显示======题目显示======题目显示=== */
 .question {
-    border: 1px solid rgb(255, 31, 31);
-    padding-left: 1em;
+    /* border: 1px solid rgb(255, 31, 31); */
+    /* padding-left: 1em; */
+    margin-top: 1em;
 }
 
 .question input {
-    font-size: medium;
+    font-size: 6vh;
     text-align: center;
     width: 4em;
+    border-radius: 8px;
 }
 .question>div:nth-of-type(1) {
-    font-size: smaller;
-    margin-top: 1em;
+    font-size: 4vh;
+    /* margin-top: 1; */
     margin-bottom: 1em;
 }
 
 .question>div:nth-of-type(2) {
-    font-size: large;
+    font-size: 6vh;
 }
 
 /* ===键位区域======键位区域======键位区域======键位区域=== */
 .keys {
+    width: 90%;
     border: 1px solid rgb(235, 135, 135);
     display: grid;
-    grid-template-columns: 9em 3em;
-    margin-left: 50px;
+    grid-template-columns: 81% 19%;
+    margin: 5%;
 }
 
 .keys-number {
     list-style: none;
     display: grid;
-    grid-template-columns: 3em 3em 3em;
+    grid-template-columns: 33% 33% 33%;
 }
 
 .keys-handle {
     list-style: none;
     display: grid;
-    grid-template-columns: 3em;
 }
 
 .keys button {
-    font-size: larger;
-    line-height: 2em;
+    color: cadetblue;
+    font-size: 5vh;
+    line-height: 8vh;
+    /* border-radius: 2px; */
 }
