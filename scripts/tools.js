@@ -64,20 +64,18 @@ function replaceHistoty(history) {
 
 // 回车键
 function ok() {
-    quesAll += 1; // 总题量 +1
     var qTxt = question.textContent;
     questionPre.textContent = qTxt + inputList[inputList.length-1].value; // 把提交的前置一个
-    quesAll += 1; // 总题数 +1
-    document.getElementById('ques-all').textContent = quesAll;
-    if (qTxt.search('×') != -1) {
+    if (qTxt.search('×') !== -1) {
         qTxt = qTxt.replace('×', '*');
-    } else if (qTxt.search('÷') != -1) {
-        qTxt.replace('÷;', '/');
+    } else if (qTxt.search('÷') !== -1) {
+        qTxt = qTxt.replace('÷', '/');
     }
-    console.log(qTxt);
     qTxt = qTxt.replace(' ', '');
-    qTxt = qTxt.replace('=', '');
-
+    qTxt = qTxt.replace(' ', '');
+    qTxt = qTxt.replace(' = ', '');
+    console.log(qTxt);
+    console.log(eval(qTxt));
     // 正确：正确数更新，前置答题追加 【正确提示】；否则 前置的答题追加【错误提示】
     if (eval(qTxt) === Number(inputList[inputList.length-1].value)) {
         questionPre.textContent += ' 正确';
@@ -85,7 +83,10 @@ function ok() {
         document.getElementById('ques-true').textContent = quesTrue;
     } else {
         questionPre.textContent += ' 错误 答案:' + eval(qTxt);
-    }
+    } 
+
+    quesAll += 1; // 总题数 +1
+    document.getElementById('ques-all').textContent = quesAll;
 
     // 修改正确率
     document.getElementById('ques-accuracy').textContent = Math.round(quesTrue/quesAll*10000)/100 + '%';
