@@ -136,9 +136,13 @@ article {
     border-radius: 15px;
 }
 
+.option p {
+    font-size: 3vh;
+}
+
 .option>p>input {
-    height: 24px;
-    width: 24px;
+    height: 1em;
+    width: 1em;
 }
 
 .option button {
