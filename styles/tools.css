@@ -124,6 +124,7 @@ article {
 
 /* 题目设置 */
 .option {
+    font-size: 3vh;
     margin-top: 10px;
     
 }
@@ -135,8 +136,9 @@ article {
     border-radius: 15px;
 }
 
-.option>span:nth-of-type(1) {
-    font-size: 3vh;
+.option>p>input {
+    height: 24px;
+    width: 24px;
 }
 
 .option button {
@@ -153,17 +155,17 @@ article {
 }
 
 .question input {
-    font-size: 5vh;
+    font-size: 5vw;
     text-align: center;
-    width: 4em;
+    width: 15vw;
     border-radius: 8px;
 }
 .question>div:nth-of-type(1) {
-    font-size: 3vh;
+    font-size: 4vw;
     /* margin-top: 1; */
     margin-bottom: 1em;
 }
 
 .question>div:nth-of-type(2) {
-    font-size: 5vh;
+    font-size: 5vw;
 }

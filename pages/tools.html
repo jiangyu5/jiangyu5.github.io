@@ -20,7 +20,7 @@
                 <li><a href="">联系</a></li>
                 <li><a href="pages/tools.html">工具</a></li>
                 <li><a href="">友链</a></li>
-                <li><a href="">关于</a></li>
+                <li><a href="about.html">关于</a></li>
                 <li>
                     <!-- <label for="theme">主题</label> -->
                     <select name="" id="theme">
@@ -50,17 +50,23 @@
                 <div class="option">
                     <span>范围:</span>
                     <input id="minNum" type="text" value="11">
-                    <span>-</span>
+                    <span>至</span>
                     <input id="maxNum" type="text" value="99">
-                    <button name="start" value="start">重置</button>
+                    <p>
+                        加<input type="checkbox" value="+" id="operation-add" checked="checked">&emsp;
+                        减<input type="checkbox" value="-" id="operation-minus">&emsp;
+                        乘<input type="checkbox" value="*" id="operation-times">&emsp;
+                        除<input type="checkbox" value="/" id="operation-divide">&emsp;
+                        <button name="start" value="start">重置</button>
+                    </p>
                 </div>
 
                 <div class="question">
                     <div id="question-pre">
-                        需要更改范围，请重置范围值。
+                        请重置范围值，并选运算。
                     </div>
                     <div>
-                        <label for="question-current">11 x 99 = </label>
+                        <label for="question-current">1 + 1 = </label>
                         <input id="question-current" type="text" value="">
                     </div>
                 </div>

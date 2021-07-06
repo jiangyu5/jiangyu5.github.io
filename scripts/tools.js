@@ -14,9 +14,33 @@ function randomNum(){
     return Math.floor(Math.floor(Math.random()*10) * (maxNum-minNum)/9) + minNum;
 }
 
+// 获取加减乘除数组
+const operationList = [inputList[2], inputList[3], inputList[4], inputList[5]];
+// console.log(operationList);
+let operation = ['+'];
+function getOperation() {
+    operation = new Array();
+    for (var i=0; i<operationList.length; i++) {
+        if (operationList[i].checked === true) {
+            operation.push(operationList[i].value);
+        }
+    }
+}
+
+// 题目生成
+function getQuestion() {
+    getOperation();
+    var rand = Math.floor(Math.random()*operation.length);
+    var rValue = operation[rand];
+    question.textContent = randomNum() +' ' + rValue + ' ' + randomNum() + ' = ';
+}
+
 // 重置按钮
 function start() {
-    question.textContent = randomNum() + ' x ' + randomNum() + ' = ';
+    getQuestion();
+    if (operation.length === 0) {
+        alert('请选择需要进行的运算');
+    }
     questionPre.textContent = '重置成功';
     document.getElementById('ques-all').textContent = 0;
     document.getElementById('ques-true').textContent = 0;
@@ -42,14 +66,20 @@ function replaceHistoty(history) {
 function ok() {
     quesAll += 1; // 总题量 +1
     var qTxt = question.textContent;
-    questionPre.textContent = qTxt + inputList[2].value; // 把提交的前置一个
+    questionPre.textContent = qTxt + inputList[inputList.length-1].value; // 把提交的前置一个
     quesAll += 1; // 总题数 +1
     document.getElementById('ques-all').textContent = quesAll;
-    qTxt = qTxt.replace(' x ', '*');
-    qTxt = qTxt.replace(' = ', '');
+    if (qTxt.search('×') != -1) {
+        qTxt = qTxt.replace('×', '*');
+    } else if (qTxt.search('÷') != -1) {
+        qTxt.replace('÷;', '/');
+    }
+    console.log(qTxt);
+    qTxt = qTxt.replace(' ', '');
+    qTxt = qTxt.replace('=', '');
 
     // 正确：正确数更新，前置答题追加 【正确提示】；否则 前置的答题追加【错误提示】
-    if (eval(qTxt) === Number(inputList[2].value)) {
+    if (eval(qTxt) === Number(inputList[inputList.length-1].value)) {
         questionPre.textContent += ' 正确';
         quesTrue += 1; // 正确数 +1
         document.getElementById('ques-true').textContent = quesTrue;
@@ -61,8 +91,8 @@ function ok() {
     document.getElementById('ques-accuracy').textContent = Math.round(quesTrue/quesAll*10000)/100 + '%';
 
     // 更新题目
-    inputList[2].value = '';
-    question.textContent = randomNum() + ' x ' + randomNum() + ' = ';
+    inputList[inputList.length-1].value = '';
+    getQuestion();
 
     // 更新历史记录
     replaceHistoty(questionPre.textContent);
@@ -77,4 +107,4 @@ function keyOk(e) {
 
 
 startButton.addEventListener('click', start);
-inputList[2].onkeyup = keyOk;
+inputList[inputList.length-1].onkeyup = keyOk;
