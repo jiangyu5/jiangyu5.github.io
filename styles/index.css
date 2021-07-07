@@ -28,6 +28,7 @@ aside {
   border-radius: 10px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
   margin-left: 2rem;
+  margin-bottom: auto;
 }
 
 aside div, aside ul {
@@ -75,4 +76,42 @@ aside li>a {
 
 aside li>a:hover {
   padding-left: 1rem;
+}
+
+
+/* ============================需要重新写============== */
+.images {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  flex: 200px;
+}
+
+figure {
+  /* border: thin #c0c0c0 solid; */
+  /* display: flex; 已经继承*/
+  flex-flow: column;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px rgba(29, 29, 29, 0.568);
+  padding: 5px;
+  max-width: 250px;
+  margin: 5px;
+}
+
+figure:hover {
+  background-color: rgba(255, 253, 255, 0.5);
+}
+
+svg {
+  max-width: 250px;
+  max-height: 100px;
+  border-radius: 10px;
+}
+
+svg+figcaption {
+  background-color: rgba(100, 92, 92, .7);
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
+  text-align: center;
 }
