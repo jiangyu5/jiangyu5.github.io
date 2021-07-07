@@ -4,171 +4,55 @@
         <meta charset="utf-8">
         <title>零的主页</title>
         <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-        <meta name="author" content="Jiang">
+        <meta name="author" content="零">
         <meta name="description" content="零的主页">
-        <link rel="stylesheet" href="styles/index.css">
+        <link href="styles/index.css" rel="stylesheet">
     </head>
-
     <body>
-        <header><!--统一页眉-->
+        <header>
             <h1>零的小乐园</h1>
-            <!-- <p>by Jiang</p> -->
         </header>
-        
-        <nav><!--统一导航栏-->
+        <nav>
             <ul>
-                <li><a href="">主页</a></li>
+                <li><a href="#">主页</a></li>
                 <li><a href="">目录</a></li>
-                <li><a href="">联系</a></li>
-                <li><a href="pages/tools.html">工具</a></li>
-                <li><a href="">友链</a></li>
-                <li><a href="pages/about.html">关于</a></li>
-                <li>
-                    <!-- <label for="theme">主题</label> -->
-                    <select name="" id="theme">
-                        <option value="dark">暗色</option>
-                        <option value="light">明亮</option>
-                    </select>
-                </li>
+                <li><a href="pages/tool-calculate.html">计算</a></li>
+                <li><a href="">关于</a></li>
             </ul>
+            <form>
+                <input type="search" name="global-search" placeholder="要搜索的内容">
+                <input type="submit" name="global-search-submit" value="搜索">
+            </form>
         </nav>
-
-        <main><!--主内容-->
-            <aside><!--侧边栏-->
-                <div id="author-bar"><!--个人介绍-->
-                    <img src="images/avatar.png" alt="头像" style="border-radius: 180px">
-                    <p>昵称：零</p>
-                    <p>邮箱：不告诉你</p>
-                    <p>个签：有点困</p>
-                </div>
-
-                <hr>
-
-                <div id="contents-bar"><!--网页指引-->
-                    <ul>
-                        <p>指引</p>
-                        <li><a href="pages/test.html" title="Windows" target="_blank">Windows</a></li>
-                        <li><a href="pages/test.html" title="Linux" target="_blank">Linux</a></li>
-                        <li><a href="pages/test.html" title="Python" target="_blank">Python</a></li>
-                        <li><a href="pages/test.html" title="C" target="_blank">C</a></li>
-                        <li><a href="pages/test.html" title="html" target="_blank">HTML</a></li>
-                        <li><a href="pages/test.html" title="others" target="_blank">其他</a></li>
-                    </ul>
-                </div>
-            </aside>
-
-            <article class="welcome"><!--内容区域-->
+        <main>
+            <article>
                 <h2>欢迎</h2>
-                <p>只有【工具】和【关于】能点开，其他链接都没有。。。</p>
-                <p>
-                    &emsp;&emsp;以下是几个主要的备忘板块，本站文档直达出处或就是对官方文档做适合自己的备忘。
-                    <br>
-                    &emsp;&emsp;主要是不知道说啥了，那就诵诗一首吧！
-                </p>
-                <section class="poem">
-                    <h3>春江花月夜</h3>
-                    <p>张若虚</p>
-                    <p>
-                        春江潮水连海平，<br>海上明月共潮生。<br>
-                        滟滟随波千万里，<br>何处春江无月明！<br>
-                        江流宛转绕芳甸，<br>月照花林皆似霰；<br>
-                        空里流霜不觉飞，<br>汀上白沙看不见。<br>
-                        江天一色无纤尘，<br>皎皎空中孤月轮。<br>
-                        江畔何人初见月？<br>江月何年初照人？<br>
-                        人生代代无穷已，<br>江月年年望相似。<br>
-                        不知江月待何人，<br>但见长江送流水。<br>
-                        白云一片去悠悠，<br>青枫浦上不胜愁。<br>
-                        谁家今夜扁舟子？<br>何处相思明月楼？<br>
-                        可怜楼上月徘徊，<br>应照离人妆镜台。<br>
-                        玉户帘中卷不去，<br>捣衣砧上拂还来。<br>
-                        此时相望不相闻，<br>愿逐月华流照君。<br>
-                        鸿雁长飞光不度，<br>鱼龙潜跃水成文。<br>
-                        昨夜闲潭梦落花，<br>可怜春半不还家。<br>
-                        江水流春去欲尽，<br>江潭落月复西斜。<br>
-                        斜月沉沉藏海雾，<br>碣石潇湘无限路。<br>
-                        不知乘月几人归，<br>落月摇情满江树。
-                    </p>
-                </section>
-
-                <hr>
-
-                <div class="images">
-                    <figure>
-                        <a href="pages/test.html" title="Windows" target="_blank">
-                            <svg>
-                                <text x="20" y="70" font-family="Verdana" font-size="50"
-                                      fill="deepskyblue" stroke="black" stroke-width="1">
-                                        Windows
-                                </text>
-                            </svg>   
-                        </a>
-                        <figcaption>关于Windows的一些文档</figcaption>
-                    </figure>
-                    <figure>
-                        <a href="pages/test.html" title="Linux" target="_blank">
-                            <svg>
-                                <text x="50" y="70" font-family="Verdana" font-size="50"
-                                      fill="fuchsia" stroke="black" stroke-width="1">
-                                        Linux
-                                </text>
-                            </svg>   
-                        </a>
-                        <figcaption>关于Linux的一些文档</figcaption>
-                    </figure>
-                    <figure>
-                        <a href="pages/test.html" title="Python" target="_blank">
-                            <svg>
-                                <text x="40" y="70" font-family="Verdana" font-size="50"
-                                      fill="skyblue" stroke="black" stroke-width="1">
-                                        Python
-                                </text>
-                            </svg>   
-                        </a>
-                        <figcaption>Python</figcaption>
-                    </figure>
-                    <figure>
-                        <a href="pages/test.html" title="C" target="_blank">
-                            <svg>
-                                <text x="50" y="70" font-family="Verdana" font-size="50"
-                                      fill="orangered" stroke="black" stroke-width="1">
-                                        C语言
-                                </text>
-                            </svg>                            
-                        </a>
-                        <figcaption>C语言</figcaption>
-                    </figure>
-                    <figure>
-                        <a href="pages/test.html" title="Web" target="_blank">
-                            <svg>
-                                <text x="70" y="70" font-family="Verdana" font-size="50"
-                                      fill="deeppink" stroke="black" stroke-width="1">
-                                        Web
-                                </text>
-                            </svg>     
-                        </a>
-                        <figcaption>Web开发</figcaption>
-                    </figure>
-                    <figure>
-                        <a href="pages/test.html" title="算法的学习" target="_blank">
-                            <svg>
-                                <text x="70" y="70" font-family="Verdana" font-size="50"
-                                      fill="cyan" stroke="black" stroke-width="1">
-                                        算法
-                                </text>
-                            </svg>     
-                        </a>
-                        <figcaption>机器学习与深度学习</figcaption>
-                    </figure>
-                </div>
+                <p>这里是零的乐园！</p>
+                <p>一边学习，一边改进</p>
             </article>
+            <aside>
+                <div>
+                    <figure>
+                        <img src="images/avatar.png" alt="头像">
+                        <figcaption>零</figcaption>
+                    </figure>
+                    <p>说明：个人网页</p>
+                </div>
+                <hr>
+                <ul>
+                    <p>指引</p>
+                    <li><a href="" title="Windows" target="_blank">Windows</a></li>
+                    <li><a href="" title="Linux" target="_blank">Linux</a></li>
+                    <li><a href="" title="Python" target="_blank">Python</a></li>
+                    <li><a href="" title="C" target="_blank">C</a></li>
+                    <li><a href="" title="html" target="_blank">HTML</a></li>
+                    <li><a href="" title="others" target="_blank">其他</a></li>
+                </ul>
+            </aside>
         </main>
-
-        <footer><!--统一页脚-->
-            <address>
-                <p>Page written by <a href="index.html">Jiang</a>.</p>
-                <p>© Jiang保留所有权利</p>
-            </address>
+        <footer>
+            <p>written by <a href="https://yustudy.cn">Jiang</a></p>
+            <p>©2021 Jiang</p>
         </footer>
-    <script src="scripts/index.js"></script>
     </body>
 </html>

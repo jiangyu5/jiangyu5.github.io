@@ -1,0 +1,68 @@
+@import "general-style.css";
+
+main {
+    display: flex;
+    margin: 0 auto;
+}
+
+aside {
+    background-color: rgba(128, 128, 128, 0.3);
+    flex: 1;
+    border-radius: 10px;
+    margin-right: 2rem;
+    padding: 2rem;
+}
+
+article {
+    background-color: rgba(128, 128, 128, 0.3);
+    flex: 3;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.option span, .option p {
+    font-size: 2rem;
+}
+
+.option > input {
+    font-size: 1.8rem;
+    text-align: center;
+    width: 3rem;
+    border-radius: 5px;
+}
+
+.option > p > input {
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+.option button {
+    font-size: 2rem;
+    border-radius: 8px;
+}
+
+.question input {
+    font-size: 3rem;
+    width: 8rem;
+    border-radius: 5px;
+}
+
+
+div[id="question-pre"] {
+    font-size: 2rem;
+    margin: 2rem 0 2rem 0;
+}
+
+.question div:nth-of-type(2) {
+    font-size: 3rem;
+}
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul[id="history"] > li{
+    font-size: 0.3rem;
+    margin-left: 0;
+}

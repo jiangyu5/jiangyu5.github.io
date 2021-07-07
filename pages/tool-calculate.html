@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>计算训练</title>
+    <meta name="author" content="零">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/tool-calculate.css">
+</head>
+<body>
+    <header>
+        <h1>小工具-计算训练</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">主页</a></li>
+            <li><a href="">目录</a></li>
+            <li><a href="">计算</a></li>
+            <li><a href="">关于</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <aside>
+            <ul>
+                <p>题目</p>
+                <li>已&emsp;答：<span id="ques-all">0</span></li>
+                <li>答&emsp;对：<span id="ques-true">0</span></li>
+                <li>正确率：<span id="ques-accuracy">0.0%</span></li>
+            </ul>
+            <ul id="history">
+                <p>历史记录</p>
+            </ul>
+
+        </aside>
+
+        <article>
+            <div class="option">
+                <span>范围：</span>
+                <input id="minNum" type="text" value="11">
+                <span>至</span>
+                <input id="maxNum" type="text" value="99">
+                <p>
+                    加<input type="checkbox" value="+" id="operation-add" checked="checked">&emsp;
+                    减<input type="checkbox" value="-" id="operation-minus">&emsp;
+                    乘<input type="checkbox" value="×" id="operation-times">&emsp;
+                    除<input type="checkbox" value="÷" id="operation-divide">&emsp;
+                    <button name="start" value="start">重置</button>
+                    
+                </p>
+            </div>
+            <hr>
+            <div class="question">
+                <div id="question-pre">
+                    请重置范围值，并选运算。
+                </div>
+                <div>
+                    <label for="question-current">1 + 1 = </label>
+                    <input id="question-current" type="text" value="">
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>written by <a href="https://yustudy.cn">Jiang</a></p>
+        <p>©2021 Jiang</p>
+    </footer>
+
+    <script src="../scripts/tool-calculate.js"></script>
+    <script>
+        const thisInputList = document.querySelectorAll("input");
+        const thisInputOne = thisInputList[0];
+        const thisInputTwo = thisInputList[1];
+        const thisInputThree = thisInputList[inputList.length-1]
+
+        thisInputOne.addEventListener("input",function(){
+            this.style.width="2rem";
+            this.style.width=this.scrollWidth+"px";
+        });
+        thisInputTwo.addEventListener("input",function(){
+            this.style.width="2rem";
+            this.style.width=this.scrollWidth+"px";
+        });
+        thisInputThree.addEventListener("input",function(){
+            this.style.width="6rem";
+            this.style.width=this.scrollWidth+"px";
+        });
+    </script>
+</body>
+</html>

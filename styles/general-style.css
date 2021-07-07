@@ -1,0 +1,126 @@
+/* 一般设置 */
+
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+html {
+  font-size: 10px;
+  background-color: rgb(73, 85, 97);
+  color: white;
+}
+
+body {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* 文字排版 */
+h1, h2, h3 {
+  font-family: '楷体', 'Microsoft YaHei', sans-serif;
+}
+
+p, input, li {
+  font-family: '宋体', Arial, Helvetica, sans-serif;
+  /* color: #2a2a2a; */
+}
+
+h1 {
+  font-size: 4rem;
+  text-shadow: 2px 2px 10px  black;
+}
+
+h2 {
+  font-size: 3rem;
+  /* text-align: center; */
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p, li {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* 导航栏 */
+nav, article, section, aside, footer {
+  padding: 1%;
+}
+
+nav {
+  height: 50px;
+  background-color: #000000;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  flex-grow: 2;
+  display: flex;
+}
+
+nav li {
+  display: inline;
+  text-align: center;
+  flex-grow: 1;
+}
+
+nav a {
+  display: inline-block;
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  color: deepskyblue;
+  text-shadow: 0 0 10px white;
+  transition-duration: 500ms;
+}
+
+nav form {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 3em;
+}
+
+nav input {
+  font-size: 1.5rem;
+  height: 32px;
+}
+
+input[name="global-search"] {
+  border-radius: 5px;
+}
+
+input[name="global-search-submit"] {
+  margin-left: 1rem;
+  background: gray;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+}
+
+/* footer */
+footer {
+  background-color: unset;
+  text-align: center;
+  border-top: 0.5px solid silver;
+  margin-top: 10px;
+}
+
+footer p {
+  color: silver;
+  margin: 0;
+}
+
+footer a {
+  /* text-decoration: none; */
+  color: silver;
+}
