@@ -1,8 +1,8 @@
 @import "general-style.css";
 
-
 main {
   display: flex;
+  flex-direction: row-reverse;
 }
 
 /* article布局 */
@@ -21,13 +21,59 @@ article p {
   margin: 0;
 }
 
+/* 图片布局 */
+.images {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  flex: 200px;
+  margin: 2rem 0;
+}
+
+.images figure {
+  border: thin solid white;
+  /* display: flex; 已经继承*/
+  flex-flow: column;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(29, 29, 29, 0.568);
+  padding: 5px;
+  max-width: 250px;
+  margin: rem;
+}
+
+.images figure:hover {
+  background-color: rgba(255, 253, 255, 0.2);
+  box-shadow: 0 0 8px white;
+  transition-duration: 200ms;
+}
+
+.images figure a > svg {
+  max-width: 250px;
+  max-height: 100px;
+  border-radius: 10px;
+}
+
+/* figure a > svg:hover{
+  padding-left: 2px;
+  box-shadow: 0 0 8px white;
+  transition-duration: 200ms;
+} */
+
+.images figure > figcaption {
+  background-color: skyblue;
+  font: italic smaller sans-serif;
+  text-align: center;
+}
+
 /* aside布局 */
 aside {
+  position: sticky;
+  top: calc(50px + 2vw);
   flex: 1;
   background-color: rgba(150, 150, 150, 0.3);
   border-radius: 10px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
-  margin-left: 2rem;
+  margin-right: 2rem;
   margin-bottom: auto;
 }
 
@@ -35,11 +81,13 @@ aside div, aside ul {
   padding: 0 1%;
 }
 
+/* 头像个人简介区域 */
 aside figure {
   text-align: center;
-  margin: 0 auto;
   font-family: '宋体', Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
+  margin: 0 auto;
+  margin-top: 1rem;
 }
 
 aside img {
@@ -52,9 +100,24 @@ aside img:hover {
   transition: 1.5s;
 }
 
+aside figcaption {
+  padding-top: 1rem;
+}
+
+aside figure ~ p {
+  font-size: 0.5rem;
+}
+
+
+/* 目录区域 */
 aside ul {
   list-style-type: none;
   text-align: center;
+}
+
+aside > ul > p {
+  /* border: 1px solid; */
+  margin: 0 auto;
 }
 
 aside li{
@@ -62,12 +125,13 @@ aside li{
   background-color: rgba(178, 214, 247, .3);
   box-shadow: rgba(29, 29, 29, 0.568);
   border: 1px solid gray;
+  margin: 0 auto;
 }
 
 aside li:hover {
-  background-color: rgba(104, 126, 250, 0.295);
-  box-shadow: 0 0 10px white;
-  transition-duration: 500ms;
+  background-color: rgba(153, 168, 252, 0.295);
+  box-shadow: 0 0 6px white;
+  transition-duration: 300ms;
 }
 
 aside li>a {
@@ -76,42 +140,4 @@ aside li>a {
 
 aside li>a:hover {
   padding-left: 1rem;
-}
-
-
-/* ============================需要重新写============== */
-.images {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  flex: 200px;
-}
-
-figure {
-  /* border: thin #c0c0c0 solid; */
-  /* display: flex; 已经继承*/
-  flex-flow: column;
-  border-radius: 10px;
-  box-shadow: 2px 2px 3px rgba(29, 29, 29, 0.568);
-  padding: 5px;
-  max-width: 250px;
-  margin: 5px;
-}
-
-figure:hover {
-  background-color: rgba(255, 253, 255, 0.5);
-}
-
-svg {
-  max-width: 250px;
-  max-height: 100px;
-  border-radius: 10px;
-}
-
-svg+figcaption {
-  background-color: rgba(100, 92, 92, .7);
-  color: #fff;
-  font: italic smaller sans-serif;
-  padding: 3px;
-  text-align: center;
 }

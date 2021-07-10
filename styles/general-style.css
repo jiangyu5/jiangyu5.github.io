@@ -51,6 +51,8 @@ nav, article, section, aside, footer {
 }
 
 nav {
+  position: sticky;
+  top: 0;
   height: 50px;
   background-color: #000000;
   display: flex;
