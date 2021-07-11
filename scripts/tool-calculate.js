@@ -7,11 +7,12 @@ const questionPre = document.getElementById('question-pre');
 let quesAll = 0;
 let quesTrue = 0;
 
+
 // 根据填入的数字生成一个随机数
 function randomNum(){
     var minNum = Number(inputList[0].value);
     var maxNum = Number(inputList[1].value);
-    return Math.floor(Math.floor(Math.random()*10) * (maxNum-minNum)/9) + minNum;
+    return Math.floor(Math.floor(Math.random() * (maxNum-minNum + 1)) + minNum);
 }
 
 // 获取加减乘除数组
